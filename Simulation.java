@@ -39,10 +39,9 @@ public class Simulation {
     Returns the ArrayList of those U1 rockets that are fully loaded */
     @SuppressWarnings("unchecked")
     public ArrayList loadU1(ArrayList list) {
-        // ArrayList to hold rockets
-        ArrayList rocketsOne = new ArrayList();
 
-        // New rocket
+        ArrayList<Rocket> rocketsOne = new ArrayList();
+
         Rocket newOne = new U1();
 
         for (int i = 0; i < list.size(); i++) {
@@ -59,8 +58,22 @@ public class Simulation {
     /* Takes the ArrayList of Items and starts creating U2 rockets,
     filling them with those items until all items are loaded.
     Returns the ArrayList of those U2 rockets that are fully loaded */
+    @SuppressWarnings("unchecked")
     public ArrayList loadU2(ArrayList list) {
 
+        ArrayList<Rocket> rocketsTwo = new ArrayList();
+
+        Rocket newTwo = new U2();
+
+        for (int i = 0; i < list.size(); i++) {
+            if (newTwo.canCarry((Item) list.get(i))) {
+                rocketsTwo.add(newTwo);
+            } else {
+                newTwo = new U2;
+                rocketsTwo.add(newTwo);
+            }
+        }
+        return rocketsTwo;
     }
 
     /* Takes an ArrayList of Rockets and calls launch and land methods
