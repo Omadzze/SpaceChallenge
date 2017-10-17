@@ -8,7 +8,7 @@ public class Simulation {
     public ArrayList loadItems() throws Exception {
         ArrayList loadManifest = new ArrayList();
         Scanner fileScannerOne = new Scanner(new File("phase-1.txt"));
-        fileScannerOne.useDelimiter(":");
+        fileScannerOne.useDelimiter("=");
 
         while (fileScannerOne.hasNextLine()) {
             Item newItem = new Item();
@@ -18,7 +18,7 @@ public class Simulation {
         }
 
         Scanner fileScannerTwo = new Scanner(new File("phase-2.txt"));
-        fileScannerTwo.useDelimiter(":");
+        fileScannerTwo.useDelimiter("=");
 
         while (fileScannerTwo.hasNextLine()) {
             Item newItem = new Item();
