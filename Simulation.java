@@ -26,6 +26,8 @@ public class Simulation {
             newItem.weight = fileScannerTwo.nextInt();
             loadManifest.add(newItem);
         }
+
+        return loadManifest;
     }
 
     public ArrayList loadU1(ArrayList list) {
