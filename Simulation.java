@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.io.File;
 import java.util.Scanner;
@@ -36,8 +37,23 @@ public class Simulation {
     /* Takes the ArrayList of Items and starts creating U1 rockets,
     filling them with those items until all items are loaded.
     Returns the ArrayList of those U1 rockets that are fully loaded */
+    @SuppressWarnings("unchecked")
     public ArrayList loadU1(ArrayList list) {
+        // ArrayList to hold rockets
+        ArrayList rocketsOne = new ArrayList();
 
+        // New rocket
+        Rocket newOne = new U1();
+
+        for (int i = 0; i < list.size(); i++) {
+            if (newOne.canCarry((Item) list.get(i))) {
+                rocketsOne.add(newOne);
+            } else {
+                newOne = new U1;
+                rocketsOne.add(newOne);
+            }
+        }
+        return rocketsOne;
     }
 
     /* Takes the ArrayList of Items and starts creating U2 rockets,
