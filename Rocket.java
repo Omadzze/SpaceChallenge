@@ -2,13 +2,13 @@ public class Rocket implements SpaceShip {
 
     /* Indicates whether a launch was successful */
     @Override
-    public boolean launchSuccess() {
+    public boolean launch() {
         return true;
     }
 
     /* Indicates whether a landing was successful */
     @Override
-    public boolean landSuccess() {
+    public boolean land() {
         return true;
     }
 

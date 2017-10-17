@@ -1,6 +1,6 @@
 public class U2 extends Rocket {
     // Fields
-    private static int cost = 120000000;
+    public static int cost = 120000000;
     private int currentWeight;
     private static int maxWeight = 29000;
 
@@ -11,7 +11,7 @@ public class U2 extends Rocket {
 
     /* Indicates whether a launch was successful. */
     @Override
-    public boolean launchSuccess() {
+    public boolean launch() {
 
         int randNo = (int) Math.floor(Math.random() * 101);
 
@@ -20,7 +20,7 @@ public class U2 extends Rocket {
 
     /* Indicates whether a launch was successful. */
     @Override
-    public boolean landSuccess() {
+    public boolean land() {
 
         int randNo = (int) Math.floor(Math.random() * 101);
 

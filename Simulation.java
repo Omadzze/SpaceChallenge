@@ -86,5 +86,21 @@ public class Simulation {
     (including the crashed ones) */
     public int runSimulation(ArrayList rockets) {
 
+        int totalCost = 0;
+
+        for (int i = 0; i < rockets.size(); i++) {
+            Rocket currentRocket = rockets.get(i);
+
+            totalCost += currentRocket.cost;
+
+            while (!currentRocket.launch()) {
+                totalCost += currentRocket.cost;
+            }
+            while (!currentRocket.land()) {
+                totalCost += currentRocket.cost;
+            }
+
+        }
+        return totalCost;
     }
 }

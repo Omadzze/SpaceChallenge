@@ -1,10 +1,10 @@
 public interface SpaceShip {
 
     /* Indicates whether a launch was successful. */
-    public boolean launchSuccess();
+    public boolean launch();
 
     /* Indicates whether a landing was successful. */
-    public boolean landSuccess();
+    public boolean land();
 
     /* Indicates whether a rocket can carry an Item. */
     public boolean canCarry(Item item);
