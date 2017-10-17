@@ -9,7 +9,7 @@ public class U1 extends Rocket {
         currentWeight = 10000;
     }
 
-    // Methods
+    /* Indicates whether a launch was successful */
     @Override
     public boolean launchSuccess() {
         int randNo = (int) Math.floor(Math.random() * 101);
@@ -17,6 +17,7 @@ public class U1 extends Rocket {
         return (5 * (currentWeight / maxWeight)) < randNo;
     }
 
+    /* Indicates whether a landing was successful */
     @Override
     public boolean landSuccess() {
         int randNo = (int) Math.floor(Math.random() * 101);

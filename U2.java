@@ -9,7 +9,7 @@ public class U2 extends Rocket {
         currentWeight = 18000;
     }
 
-    // Methods
+    /* Indicates whether a launch was successful. */
     @Override
     public boolean launchSuccess() {
 
@@ -18,6 +18,7 @@ public class U2 extends Rocket {
         return (4 * (currentWeight / maxWeight) < randNo);
     }
 
+    /* Indicates whether a launch was successful. */
     @Override
     public boolean landSuccess() {
 
