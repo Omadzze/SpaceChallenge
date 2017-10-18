@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Main {
 
     @SuppressWarnings("unchecked")
-    public static void main(char[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
 
         Simulation mySim = new Simulation();
 
