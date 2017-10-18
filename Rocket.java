@@ -1,5 +1,10 @@
 public class Rocket implements SpaceShip {
 
+    // Fields
+    private static int cost;
+    private int currentWeight;
+    private static int maxWeight;
+
     /* Indicates whether a launch was successful */
     @Override
     public boolean launch() {
