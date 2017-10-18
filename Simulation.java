@@ -56,7 +56,7 @@ public class Simulation {
             if (newOne.canCarry((Item) list.get(i))) {
                 rocketsOne.add(newOne);
             } else {
-                newOne = new U1;
+                newOne = new U1();
                 rocketsOne.add(newOne);
             }
         }
@@ -77,7 +77,7 @@ public class Simulation {
             if (newTwo.canCarry((Item) list.get(i))) {
                 rocketsTwo.add(newTwo);
             } else {
-                newTwo = new U2;
+                newTwo = new U2();
                 rocketsTwo.add(newTwo);
             }
         }
@@ -92,22 +92,16 @@ public class Simulation {
 
     Returns the total budget required to send all rockets
     (including the crashed ones) */
-    public int runSimulation(ArrayList rockets) {
+    public int runSimulation(ArrayList<Rocket> rockets) {
 
         int totalCost = 0;
 
-        for (int i = 0; i < rockets.size(); i++) {
-            Rocket currentRocket = rockets.get(i);
+        for (Rocket currentRocket : rockets) {
+            totalCost += currentRocket.getCost();
 
-            totalCost += currentRocket.cost;
-
-            while (!currentRocket.launch()) {
-                totalCost += currentRocket.cost;
+            while (!currentRocket.launch() || !currentRocket.land()) {
+                totalCost += currentRocket.getCost();
             }
-            while (!currentRocket.land()) {
-                totalCost += currentRocket.cost;
-            }
-
         }
         return totalCost;
     }

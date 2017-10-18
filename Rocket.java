@@ -31,4 +31,10 @@ public class Rocket implements SpaceShip {
 
         currentWeight += item.weight;
     }
+
+    /* Gets cost of rocket */
+    @Override
+    public int getCost() {
+        return cost;
+    }
 }

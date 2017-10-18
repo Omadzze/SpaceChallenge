@@ -12,4 +12,7 @@ public interface SpaceShip {
     /* Adds Item weight to a rocket's current weight,
     ie. loads a rocket. */
     public void carry(Item item);
+
+    /* Gets cost of rocket */
+    public int getCost();
 }

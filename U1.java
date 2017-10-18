@@ -25,10 +25,4 @@ public class U1 extends Rocket {
 
         return (currentWeight / maxWeight) < randNo;
     }
-
-    /* Gets cost */
-    public int getCost() {
-        return cost;
-    }
-
 }
