@@ -5,9 +5,7 @@ import java.util.Scanner;
 
 public class Simulation {
 
-    //
-
-    /* Loads all items from a text file
+    /* Loads all items from phase-1.txt
     and returns an ArrayList of Items */
     @SuppressWarnings("unchecked")
     public ArrayList loadItemsOne() throws Exception {
@@ -25,6 +23,8 @@ public class Simulation {
         return loadManifest;
     }
 
+    /* Loads all items from phase-2.txt
+    and returns an ArrayList of Items */
     @SuppressWarnings("unchecked")
     public ArrayList loadItemsTwo() throws Exception {
 
