@@ -101,10 +101,10 @@ class Simulation {
         int totalCost = 0;
 
         for (Rocket currentRocket : rockets) {
-            totalCost += currentRocket.cost;
+            totalCost += currentRocket.getCost();
 
             while (!currentRocket.launch() || !currentRocket.land()) {
-                totalCost += currentRocket.cost;
+                totalCost += currentRocket.getCost();
             }
         }
         return totalCost;

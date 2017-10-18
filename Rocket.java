@@ -2,8 +2,8 @@ public class Rocket implements SpaceShip {
 
     // Fields
     int cost;
-    private int currentWeight;
-    private static int maxWeight;
+    int currentWeight;
+    int maxWeight;
 
     /* Indicates whether a launch was successful */
     @Override
@@ -30,5 +30,9 @@ public class Rocket implements SpaceShip {
     public final void carry(Item item) {
 
         currentWeight += item.weight;
+    }
+
+    public int getCost() {
+        return cost;
     }
 }

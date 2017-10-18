@@ -1,13 +1,10 @@
 public class U1 extends Rocket {
 
-    // Fields
-    final int cost = 100000000;
-    private int currentWeight;
-    private final int maxWeight = 18000;
-
     // Default constructor
     U1() {
+        cost = 100000000;
         currentWeight = 10000;
+        maxWeight = 18000;
     }
 
     /* Indicates whether a launch was successful */
