@@ -1,9 +1,9 @@
 public class U2 extends Rocket {
 
     // Fields
-    private static int cost = 120000000;
+    final int cost = 120000000;
     private int currentWeight;
-    private static int maxWeight = 29000;
+    private final int maxWeight = 29000;
 
     // Default constructor
     U2() {

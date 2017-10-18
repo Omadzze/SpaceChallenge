@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.io.File;
 import java.util.Scanner;
 
-public class Simulation {
+class Simulation {
 
     /* Loads all items from phase-1.txt
     and returns an ArrayList of Items.
@@ -101,10 +101,10 @@ public class Simulation {
         int totalCost = 0;
 
         for (Rocket currentRocket : rockets) {
-            totalCost += currentRocket.getCost();
+            totalCost += currentRocket.cost;
 
             while (!currentRocket.launch() || !currentRocket.land()) {
-                totalCost += currentRocket.getCost();
+                totalCost += currentRocket.cost;
             }
         }
         return totalCost;

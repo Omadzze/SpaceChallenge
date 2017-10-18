@@ -1,18 +1,15 @@
-public interface SpaceShip {
+interface SpaceShip {
 
     /* Indicates whether a launch was successful. */
-    public boolean launch();
+    boolean launch();
 
     /* Indicates whether a landing was successful. */
-    public boolean land();
+    boolean land();
 
     /* Indicates whether a rocket can carry an Item. */
-    public boolean canCarry(Item item);
+    boolean canCarry(Item item);
 
     /* Adds Item weight to a rocket's current weight,
     ie. loads a rocket. */
-    public void carry(Item item);
-
-    /* Gets cost of rocket */
-    public int getCost();
+    void carry(Item item);
 }

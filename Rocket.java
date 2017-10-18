@@ -1,7 +1,7 @@
 public class Rocket implements SpaceShip {
 
     // Fields
-    private static int cost;
+    int cost;
     private int currentWeight;
     private static int maxWeight;
 
@@ -21,7 +21,7 @@ public class Rocket implements SpaceShip {
     @Override
     public final boolean canCarry(Item item) {
 
-        return (currentWeight + item.weight) > maxWeight;
+        return (currentWeight + item.weight) >= maxWeight;
     }
 
     /* Adds Item weight to a rocket's current weight,
@@ -30,11 +30,5 @@ public class Rocket implements SpaceShip {
     public final void carry(Item item) {
 
         currentWeight += item.weight;
-    }
-
-    /* Gets cost of rocket */
-    @Override
-    public int getCost() {
-        return cost;
     }
 }
