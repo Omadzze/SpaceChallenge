@@ -52,14 +52,13 @@ public class Simulation {
     filling them with those items until all items are loaded.
     Returns the ArrayList of those U1 rockets that are fully loaded */
     @SuppressWarnings("unchecked")
-    public ArrayList loadU1(ArrayList list) {
+    public ArrayList loadU1(ArrayList<Item> list) {
 
         ArrayList<Rocket> rocketsOne = new ArrayList();
-
         Rocket newOne = new U1();
 
-        for (int i = 0; i < list.size(); i++) {
-            if (newOne.canCarry((Item) list.get(i))) {
+        for (Item thisItem : list) {
+            if (newOne.canCarry(thisItem)) {
                 rocketsOne.add(newOne);
             } else {
                 newOne = new U1();
@@ -73,14 +72,13 @@ public class Simulation {
     filling them with those items until all items are loaded.
     Returns the ArrayList of those U2 rockets that are fully loaded */
     @SuppressWarnings("unchecked")
-    public ArrayList loadU2(ArrayList list) {
+    ArrayList loadU2(ArrayList<Item> list) {
 
         ArrayList<Rocket> rocketsTwo = new ArrayList();
-
         Rocket newTwo = new U2();
 
-        for (int i = 0; i < list.size(); i++) {
-            if (newTwo.canCarry((Item) list.get(i))) {
+        for (Item thisItem : list) {
+            if (newTwo.canCarry(thisItem)) {
                 rocketsTwo.add(newTwo);
             } else {
                 newTwo = new U2();
@@ -98,7 +96,7 @@ public class Simulation {
 
     Returns the total budget required to send all rockets
     (including the crashed ones) */
-    public int runSimulation(ArrayList<Rocket> rockets) {
+    int runSimulation(ArrayList<Rocket> rockets) {
 
         int totalCost = 0;
 
