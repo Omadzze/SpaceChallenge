@@ -10,7 +10,7 @@ public class Simulation {
     Line splitting method from
     https://stackoverflow.com/a/15903334/7041984 */
     @SuppressWarnings("unchecked")
-    ArrayList loadItemsOne() throws Exception {
+    ArrayList<Item> loadItemsOne() throws Exception {
 
         ArrayList<Item> loadManifest = new ArrayList();
         Scanner fileScanner = new Scanner(new File("phase-1.txt"));
@@ -32,7 +32,7 @@ public class Simulation {
     Line splitting method from
     https://stackoverflow.com/a/15903334/7041984 */
     @SuppressWarnings("unchecked")
-    ArrayList loadItemsTwo() throws Exception {
+    ArrayList<Item> loadItemsTwo() throws Exception {
 
         ArrayList<Item> loadManifest = new ArrayList();
         Scanner fileScanner = new Scanner(new File("phase-2.txt"));
@@ -52,7 +52,7 @@ public class Simulation {
     filling them with those items until all items are loaded.
     Returns the ArrayList of those U1 rockets that are fully loaded */
     @SuppressWarnings("unchecked")
-    ArrayList loadU1(ArrayList<Item> list) {
+    ArrayList<Rocket> loadU1(ArrayList<Item> list) {
 
         ArrayList<Rocket> rocketsOne = new ArrayList();
         Rocket newOne = new U1();
@@ -72,7 +72,7 @@ public class Simulation {
     filling them with those items until all items are loaded.
     Returns the ArrayList of those U2 rockets that are fully loaded */
     @SuppressWarnings("unchecked")
-    ArrayList loadU2(ArrayList<Item> list) {
+    ArrayList<Rocket> loadU2(ArrayList<Item> list) {
 
         ArrayList<Rocket> rocketsTwo = new ArrayList();
         Rocket newTwo = new U2();

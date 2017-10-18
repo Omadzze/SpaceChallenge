@@ -15,7 +15,6 @@ public class U2 extends Rocket {
     public boolean launch() {
 
         int randNo = (int) Math.floor(Math.random() * 101);
-
         return (4 * (currentWeight / maxWeight) < randNo);
     }
 
@@ -24,7 +23,6 @@ public class U2 extends Rocket {
     public boolean land() {
 
         int randNo = (int) Math.floor(Math.random() * 101);
-
         return (8 * (currentWeight / maxWeight) < randNo);
 
     }
