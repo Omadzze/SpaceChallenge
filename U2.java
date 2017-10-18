@@ -28,4 +28,9 @@ public class U2 extends Rocket {
         return (8 * (currentWeight / maxWeight) < randNo);
 
     }
+
+    /* Gets cost */
+    public int getCost() {
+        return cost;
+    }
 }
