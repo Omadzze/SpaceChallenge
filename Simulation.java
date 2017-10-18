@@ -9,25 +9,33 @@ public class Simulation {
 
     /* Loads all items from a text file
     and returns an ArrayList of Items */
-    public ArrayList loadItems() throws Exception {
-        ArrayList loadManifest = new ArrayList();
-        Scanner fileScannerOne = new Scanner(new File("phase-1.txt"));
-        fileScannerOne.useDelimiter("=");
+    @SuppressWarnings("unchecked")
+    public ArrayList loadItemsOne() throws Exception {
 
-        while (fileScannerOne.hasNextLine()) {
+        ArrayList<Item> loadManifest = new ArrayList();
+        Scanner fileScanner = new Scanner(new File("phase-1.txt"));
+        fileScanner.useDelimiter("=");
+
+        while (fileScanner.hasNextLine()) {
             Item newItem = new Item();
-            newItem.name = fileScannerOne.nextLine();
-            newItem.weight = fileScannerOne.nextInt();
+            newItem.name = fileScanner.nextLine();
+            newItem.weight = fileScanner.nextInt();
             loadManifest.add(newItem);
         }
+        return loadManifest;
+    }
 
-        Scanner fileScannerTwo = new Scanner(new File("phase-2.txt"));
-        fileScannerTwo.useDelimiter("=");
+    @SuppressWarnings("unchecked")
+    public ArrayList loadItemsTwo() throws Exception {
 
-        while (fileScannerTwo.hasNextLine()) {
+        ArrayList<Item> loadManifest = new ArrayList();
+        Scanner fileScanner = new Scanner(new File("phase-2.txt"));
+        fileScanner.useDelimiter("=");
+
+        while (fileScanner.hasNextLine()) {
             Item newItem = new Item();
-            newItem.name = fileScannerTwo.nextLine();
-            newItem.weight = fileScannerTwo.nextInt();
+            newItem.name = fileScanner.nextLine();
+            newItem.weight = fileScanner.nextInt();
             loadManifest.add(newItem);
         }
 
