@@ -1,4 +1,3 @@
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.io.File;
 import java.util.Scanner;
@@ -6,39 +5,46 @@ import java.util.Scanner;
 public class Simulation {
 
     /* Loads all items from phase-1.txt
-    and returns an ArrayList of Items */
+    and returns an ArrayList of Items.
+
+    Line splitting method from
+    https://stackoverflow.com/a/15903334/7041984 */
     @SuppressWarnings("unchecked")
     public ArrayList loadItemsOne() throws Exception {
 
         ArrayList<Item> loadManifest = new ArrayList();
         Scanner fileScanner = new Scanner(new File("phase-1.txt"));
-        fileScanner.useDelimiter("=");
 
         while (fileScanner.hasNextLine()) {
             Item newItem = new Item();
-            newItem.name = fileScanner.nextLine();
-            newItem.weight = fileScanner.nextInt();
+            String[] tokens = fileScanner.nextLine().split("=");
+            newItem.name = tokens[0];
+            newItem.weight = Integer.parseInt(tokens[tokens.length-1]);
+
             loadManifest.add(newItem);
         }
         return loadManifest;
     }
 
     /* Loads all items from phase-2.txt
-    and returns an ArrayList of Items */
+    and returns an ArrayList of Items.
+
+    Line splitting method from
+    https://stackoverflow.com/a/15903334/7041984 */
     @SuppressWarnings("unchecked")
     public ArrayList loadItemsTwo() throws Exception {
 
         ArrayList<Item> loadManifest = new ArrayList();
         Scanner fileScanner = new Scanner(new File("phase-2.txt"));
-        fileScanner.useDelimiter("=");
 
         while (fileScanner.hasNextLine()) {
             Item newItem = new Item();
-            newItem.name = fileScanner.nextLine();
-            newItem.weight = fileScanner.nextInt();
+            String[] tokens = fileScanner.nextLine().split("=");
+            newItem.name = tokens[0];
+            newItem.weight = Integer.parseInt(tokens[tokens.length-1]);
+
             loadManifest.add(newItem);
         }
-
         return loadManifest;
     }
 
